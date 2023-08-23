@@ -50,7 +50,7 @@ if(trending === 9) {
 
 
 
-const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw` , {next : {revalidate : 86400}})
+const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw` )
 const data = await res.json()
 return data.data
 
