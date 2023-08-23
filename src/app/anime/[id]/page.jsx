@@ -62,7 +62,7 @@ export default async function page({ params }) {
             <p>{data?.synopsis}</p>
           <div className={styles.animeGenres}>
             {data?.genres.slice(0,3).map((items) => (
-              <h3>{items?.name}</h3>
+              <h3 key={items?.mal_id}>{items?.name}</h3>
               ))}
           </div>
 
@@ -82,6 +82,7 @@ export default async function page({ params }) {
                 height={300}
                 width={300}
                 className={styles.animeTrailer}
+                alt={data?.title}
                 />
                 )}
           </div>
@@ -94,7 +95,7 @@ export default async function page({ params }) {
           <h2>Streaming On</h2>
           <div className={styles.streamingAll}>
             {data?.streaming.slice(0, 5).map((items) => (
-              <div className={styles.streamingServices}>
+              <div className={styles.streamingServices} key={items.length}>
                 <a href={items?.url} target="blank">
                   {items?.name}
                 </a>
