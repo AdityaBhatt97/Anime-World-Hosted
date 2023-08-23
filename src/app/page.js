@@ -56,7 +56,7 @@ export  default async  function Home() {
   <div className={styles.topRated_home}>
     {
       data.slice(0,24).map(items => (
-        <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
+        <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}} key={items?.mal_id}>
         <div key={items?.mal_id}>
         <Image src={items?.images?.jpg?.image_url} alt= {items?.titles[0].title} height={250} width={250} className={styles.topRatedImages}/>
         <h3>{items?.titles[0].title}</h3>

@@ -35,7 +35,7 @@ export  async function Recommended () {
 {
     data?.data.slice(0,4).map(items => (
 
-        <Link href={`/anime/${items?.mal_id}`} style={{textDecoration: "none"}}>
+        <Link href={`/anime/${items?.mal_id}`} style={{textDecoration: "none"}} key={items?.mal_id}>
     <div key={items?.mal_id}>
      <Image src={items?.images.jpg.image_url} alt= {items?.title} width={250} height={250} className={styles.recommendedImages}/>
     <h2>{items?.title}</h2>

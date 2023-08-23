@@ -12,8 +12,8 @@ export const SearchResults= ({data}) => {
 
 {
   data?.data.slice(0,3).map(items => (
-                <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
-                <div className={styles.autoCompleteAnime} key={data?.mal_id}>
+                <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}} key={items?.mal_id}>
+                <div className={styles.autoCompleteAnime} key={items?.mal_id}>
                     <div>
 
                     <Image src={items?.images?.webp?.image_url} alt={items?.title} height={150} width={150} className={styles.autoCompleteImage}/>

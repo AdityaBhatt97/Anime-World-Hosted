@@ -104,7 +104,7 @@ let end = data.length;
  
  {
   data.splice(start + 3 , end).map(items => (
-    <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
+    <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}} key={items?.mal_id}>
   <div className={styles.categoriesAnime} key={items?.mal_id}> 
    <Image src={items?.images?.jpg?.image_url} height={250} width={250} className= {styles.categoriesAnimeImg} alt={data[start]?.title} />
     <h2>{items?.title}</h2>

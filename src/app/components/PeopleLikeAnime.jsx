@@ -30,7 +30,7 @@ const getData = async(param) => {
 
 
 
-        <Link  href={`/anime/${items?.entry?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
+        <Link  href={`/anime/${items?.entry?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}} key={items?.entry?.mal_id}>
         <div className={styles.peopleLikeAnime} key={items?.entry?.mal_id}>
             <Image src={items?.entry?.images?.webp?.image_url} height={250} width={250} className={styles.peopleLikeImages} alt={items?.entry?.title}/>
             <h2>{items?.entry?.title}</h2>

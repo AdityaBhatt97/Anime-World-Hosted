@@ -41,7 +41,7 @@ export  default async  function page({params}){
 
 
   data.length > 0 ?  data.map(items => (
-        <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none', color: 'white'}}>
+        <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none', color: 'white'}} key={items?.mal_id}>
         <div className={styles.searchAnime} key={items?.mal_id}>
 
         <Image  className = {styles.searchImages} src={items?.images?.webp?.image_url} height={250} width={250} alt={items?.title}/>
