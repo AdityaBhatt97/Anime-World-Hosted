@@ -1,0 +1,595 @@
+.animePage{
+    background: linear-gradient(125deg ,  #17245f , rgb(20, 20, 20));
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    /* z-index: -3; */
+}
+
+.animePageImage{
+    position: relative;
+    /* margin-top: 10vh; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+
+}
+
+.animeBg{
+    position: absolute;
+    background-color: rgba(27, 27, 27, 0.767);
+    top: 0;
+    left: 0;
+ 
+    width: 100vw;
+    height: 50vh;
+    z-index: 2;
+
+    
+}
+.animeImage{
+    position: relative;
+    z-index: 3;
+}
+
+.animeImageBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 50vh;
+    width: 100vw;
+    z-index: 1;
+    
+}
+
+
+/* Anime Info */
+
+.animeInfo{
+    margin-top: 8vh;
+    width: 100vw;
+    min-height: 50vh;
+    text-align: center;
+    position: relative;
+
+ 
+}
+
+.animeFullInfo{
+    display: flex;
+
+    margin-top: 10vh;
+    position: relative;
+ 
+    
+}
+
+.animeTitle{
+ 
+  font-family: cursive;
+  
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    color: white;
+    font-size: 4rem;
+
+}
+
+.animeDetails{
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    margin-left: 10vw;
+
+
+}
+.animeDetails p {
+    margin: 2vh 0 ;
+}
+
+.animeTrailerInfo{
+    flex: 1;
+}
+.animeTrailerInfo iframe {
+    width: 30vw;
+    height: 40vh;
+}
+
+.rating{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating span{
+    font-size: 2.5rem;
+   
+}
+
+/* Stars */
+
+.icon {
+    color: white;
+    font-size: 3rem;
+}
+
+
+/* Streaming  */
+
+.streaming {
+    width: 100vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.streaming h2{
+    font-size: 2.5rem;
+}
+
+.streamingAll{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.streamingServices a
+{
+    min-height: 20vh;
+    max-height: 20vh;
+    max-width: 10vw;
+    min-width: 10vw;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    color: white;
+    background-color: rgba(184, 15, 15, 0.842);
+
+    border-radius: 10%;
+    transition: all .8s ease-in-out;
+}
+
+.streamingServices a:hover{
+    border: 5px solid gold;
+    transform: translateY(-10px);
+}
+/* Anime Genre */
+
+.animeGenres{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    margin-left: 20vw;
+}
+
+.animeGenres h3{
+    margin-right: 2vw;
+}
+
+/* People Like Animes */
+
+
+.peopleLike{
+    margin-top: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.peopleLikeAnimes{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.peopleLikeAnime{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    max-width: 20vw;
+    min-width: 20vw;
+    min-height: 45vh;
+
+    transition: all .8s ease-in-out;
+}
+
+
+.peopleLikeAnime:hover{
+    border: 2px solid goldenrod;
+    background-color: goldenrod;
+}
+.peopleLikeAnime h2{
+    margin-top: 3vh;
+    height: 4vh;
+    width: 15vw;
+}
+
+/* Loading */
+
+.loading{
+    background: linear-gradient(125deg ,  #17245f , rgb(20, 20, 20));
+    display: flex;
+ height: 100vh;
+ width: 100vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4rem;
+}
+
+
+/* Media Queries */
+
+
+@media screen and (max-width : 1450px) {
+   
+    .animeTitle{
+        font-size: 3rem;
+    }
+
+    .animeFullInfo{
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: 2rem;
+    }
+
+    .animeTrailerInfo iframe {
+        width: 38vw;
+    }
+   }
+   
+@media screen and (max-width : 1290px) {
+   
+    .animeTitle{
+        font-size: 3rem;
+    }
+ 
+ .animeDetails{
+    margin-right: 5vw;
+ }
+
+    .animeFullInfo{
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: 1.7rem;
+    }
+    .rating h2{
+        font-size: 1.2rem;
+    }
+    .rating span{
+        font-size: 1.4rem;
+    }
+   
+    .peopleLikeAnime{
+      min-width: 25vw;
+      min-height: 35vh;
+
+    }
+    .peopleLikeAnime h2{
+        font-size: 1.2rem;
+    }
+
+    .streamingServices a
+{
+    min-height: 20vh;
+    max-height: 20vh;
+    max-width: 15vw;
+    min-width: 15vw;
+    margin: 10px;
+ 
+}
+
+
+   }
+@media screen and (max-width : 1050px) {
+   
+    .animeTitle{
+        font-size: 2.5rem;
+    }
+
+    .animeFullInfo{
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: 1.7rem;
+    }
+   .animeFullInfo{
+    flex-direction: column;
+   }
+   .animeDetails{
+    width: 70vw;
+    margin-bottom: 5vh;
+   }
+   .rating{
+    width: 80%;
+    margin-bottom: 5vh;
+   }
+   .animeGenres{
+    margin-top: 2vh;
+   }
+  .animeTrailerInfo iframe{
+    width: 60vw;
+  }
+
+
+  .streamingServices a{
+     min-width: 15vw;
+     margin-left: 3vw;
+     font-size: 1.2rem;
+     min-height: 15vh;
+  }
+
+     
+  .peopleLikeAnime{
+    min-width: 25vw;
+    min-height: 35vh;
+
+  }
+  .peopleLikeAnime h2{
+      font-size: 1.2rem;
+   
+  }
+  .peopleLikeImages{
+      height: 20vh;
+      width: 15vw;
+  }
+
+   }
+
+   @media screen and (max-width : 870px) {
+   
+    .animeTitle{
+        font-size: 2rem;
+    }
+
+    .animeFullInfo{
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: 1.7rem;
+    }
+    .rating h2{
+        font-size: 1.2rem;
+    }
+    .rating span{
+        font-size: 1.4rem;
+    }
+
+    .streaming h2{
+        font-size: 1.7rem;
+        margin-bottom: -4vh;
+    }
+
+    .loading h2{
+        font-size: 1.5rem;
+    }
+   }
+
+   @media screen and (max-width : 750px) {
+     
+.animeTitle{
+    font-size: 1.7rem;
+}
+    .rating{
+        width: 100%;
+    }
+    
+  
+
+    .animeFullInfo{
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: 1.7rem;
+    }
+    .rating h2{
+        font-size: 1.2rem;
+    }
+    .rating span{
+        font-size: 1.4rem;
+    }
+
+    .streamingServices a{
+        min-height: 12vh;
+        font-size: 1rem;
+    }
+    .animeTrailerInfo iframe{
+        width: 80vw;
+    }
+    .streaming h2{
+        font-size: 1.5rem;
+    }
+
+    .peopleLikeAnime{
+        min-width: 25vw;
+        min-height: 30vh;
+  
+      }
+      .peopleLikeAnime h2{
+          font-size: 1rem;
+      }
+      .peopleLikeImages{
+          height: 14vh;
+          width: 20vw;
+      }
+  
+   }
+ 
+   
+   @media screen and (max-width : 620px) {
+     
+.animeTitle{
+    font-size: 1.4rem;
+}
+    .rating{
+        width: 100%;
+    }
+    
+  
+
+    .animeFullInfo{
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: 1.4rem;
+    }
+    .rating h2{
+        font-size: 1rem;
+    }
+    .rating span{
+        font-size: 1.2rem;
+    }
+    .animeDetails p{
+        font-size: .8rem;
+    }
+    .animeGenres{
+        font-size: .8rem;
+    }
+
+    .streamingServices a{
+        min-height: 10vh;
+        font-size: .8rem;
+
+    }
+    .animeTrailerInfo iframe{
+        width: 80vw;
+    }
+    .streaming h2{
+        font-size: 1.3rem;
+    }
+   }
+   
+   
+   @media screen and (max-width : 500px) {
+     
+.animeTitle{
+    font-size: 1.3rem;
+}
+    .rating{
+        width: 100%;
+    }
+    
+  
+
+    .animeFullInfo{
+        margin-left: 5vw;
+        margin-top: 5vh;
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: .8rem;
+    }
+    .rating h2{
+        font-size: .8rem;
+    }
+    .rating span{
+        font-size: .8rem;
+    }
+    .animeDetails p{
+        font-size: .6rem;
+    }
+    .animeGenres{
+        font-size: .6rem;
+    }
+
+    .streamingServices a{
+        
+        min-height: 8vh;
+        font-size: .7rem;
+    }
+    .animeTrailerInfo iframe{
+        width: 80vw;
+        margin-right: 8vw;
+    }
+    .streaming h2{
+        font-size: 1.1rem;
+    }
+    
+      .peopleLikeAnime h2{
+        margin-top: 1vh;
+          font-size: .7rem;
+      }
+   
+  
+   }
+   
+   
+   @media screen and (max-width : 360px) {
+     
+.animeTitle{
+    font-size: .8rem;
+}
+    .rating{
+        width: 100%;
+    }
+    
+  
+
+    .animeFullInfo{
+        margin-left: 5vw;
+        margin-top: 5vh;
+        width: 100vw;
+        /* border: 2px solid white; */
+    }
+    .icon{
+        font-size: .6rem;
+    }
+    .rating h2{
+        font-size: .6rem;
+    }
+    .rating span{
+        font-size: .6rem;
+    }
+    .animeDetails p{
+        font-size: .5rem;
+    }
+    .animeGenres{
+        font-size: .5rem;
+    }
+
+    .streamingServices a{
+        
+        min-height: 6vh;
+        font-size: .4rem;
+    }
+    .animeTrailerInfo iframe{
+        height: 30vh;
+        width: 80vw;
+        margin-right: 8vw;
+    }
+    .streaming h2{
+        font-size: 1rem;
+    }
+    .peopleLikeAnime h2{
+        margin-top: 1vh;
+          font-size: .5rem;
+      }
+   }
+   

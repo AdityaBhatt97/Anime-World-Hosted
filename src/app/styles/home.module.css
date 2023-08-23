@@ -1,0 +1,563 @@
+.description {
+    background: linear-gradient(125deg ,  #17245f , rgb(20, 20, 20));
+    min-height: 200vh;
+    position: relative;
+    /* z-index: -100; */
+    color: white;
+    overflow: hidden;
+}
+
+.mainBg {
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: -50;
+    height: 100vh;
+    width: 100vw;
+}
+.mainBgOverlay {
+    background-color: rgba(0, 0, 0, 0.212);
+    /* background-color: #1524648a; */
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -40;
+}
+
+
+/* Carousel */
+
+.container{
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 4;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all .3s ease-in-out ;
+    overflow: hidden;
+    
+}
+.wrapper{
+    display: flex;
+    transition: all .3s ease-in-out ;
+    cursor: pointer;
+    
+}
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+}
+.mainBg{
+    height: 100%;
+
+    width: 100%;
+}
+
+
+.arrowLeft{
+    position: absolute;
+    top: 40%;
+    font-size: 3rem;
+    color: white;
+    left: 0;
+    z-index: 10;
+}
+.arrowRight{
+    position: absolute;
+    top: 40%;
+    font-size: 3rem;
+    color: white;
+    right: 0;
+    z-index: 10;
+}
+
+/* Recommended */
+
+
+.recommended {
+
+    margin-top: 5vh;
+
+    width: 100vw;
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+
+}
+.recommended_title{
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+}
+.recommended_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+.recommended_list div{
+
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40vh;
+    min-width: 20vw;
+   
+
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.recommended_list div:hover{
+    background-color: goldenrod;
+}
+
+.recommended_list div h2{
+    margin-top: 2vh;
+    color: white;
+
+
+}
+
+
+/* Categories Home Titles*/
+
+.all_categories{
+    width: 100vw;
+    min-height: 50vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+
+}
+.all_categories_title{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 2.5rem;
+    letter-spacing: 2px ;
+
+}
+.main_categories{
+    width: 95vw;
+    min-height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vh;
+    align-items: center;
+    justify-content: space-evenly;
+     /* border: 2px solid white; */
+}
+
+.categories{
+    margin-top: 4vh;
+    position: relative;
+    min-width: 20vw;
+    min-height: 25vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.categories div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    /* cursor: pointer; */
+    background-color: rgba(184, 15, 15, 0.842);
+    width: 100%;
+    height: 100%;
+}
+.categories_image{
+position: absolute;
+top: 0;
+left: 0;
+z-index: -3;
+width: 100%;
+height: 100%;
+}
+
+/* Top Rated*/
+
+.topRated{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+margin-top: 8vh;
+
+}
+.topRated h2{
+    font-size: 2.5rem;
+    margin-top: 4vh;
+    letter-spacing: 2px;
+    margin-bottom: 7vh;
+}
+.topRated_home{
+
+    display: grid;
+    grid-template-columns: repeat(4 , 23vw);
+    grid-gap: 5px;
+    margin-bottom: 5vh;
+    
+
+}
+
+
+.topRated_home div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    min-height: 40vh;
+    min-width: 20vw;
+    transition: all ease-in-out;
+}
+.topRated_home div:hover {
+    background-color: goldenrod;
+}
+
+.topRated_home div h3{
+    font-size: 1.2rem;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    max-width: 40vw;
+    max-height: 2vh;
+}
+
+
+/* Footer */
+
+.footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(29, 29, 29);
+    position: absolute;
+    bottom: 0;
+}
+
+/* Media Queries */
+
+/* Recommended */
+@media screen and (max-width: 1270px){
+
+    .recommended_title{
+        font-size: 1.7rem;
+
+    }
+
+    .recommendedImages{
+        height: 25vh;
+        width: 15vw;
+    }
+    .recommended_list h2{
+        font-size: 1.3rem;
+    }
+
+    /* top rated */
+
+    .topRatedImages{
+        height: 25vh;
+        width: 15vw;
+    }
+
+    .topRated_home div h3{
+        font-size: 1rem;
+    }
+    
+ 
+}
+
+@media screen and (max-width : 1000px) {
+    .recommended_list div {
+        min-width: 18vw;
+        min-height: 35vh;
+    }
+
+    .recommended_list h2{
+        font-size: 1.1rem;
+    }
+    .recommendedImages{
+        height: 20vh;
+        width: 15vw;
+    }
+
+    /* top rated */
+
+    .topRatedImages{
+        width: 18vw;
+    }
+
+    /* Main Carousel */
+.container {
+    height: 90vh;
+}
+    .mainBg{
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width : 780px) {
+
+    /* Carousel */
+
+    
+    .container{
+        height: 70vh;
+    }
+   .slide{
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(37, 36, 36); */
+    background: url('https://png.pngtree.com/background/20210711/original/pngtree-dark-vector-abstract-background-picture-image_1159556.jpg');
+    background: url('https://img.freepik.com/premium-photo/modern-brick-wall-3d-rendering_118019-218.jpg');
+    height: 70vh;
+   }
+    .mainBg{
+        height: 80%;
+        width: 90%;
+        margin-right: 2vw;
+    }
+
+    /* Recommended */
+    .recommended_list  {
+    flex-direction: column;
+    /* margin-top: -12vh; */
+    }
+    .recommended_list div {
+        height: 45vh;
+        width: 45vw;
+
+    }
+    
+  .recommendedImages{
+    height: 35vh;
+    width: 40vw;
+  }
+  .recommended_list h2{
+    font-size: 1.4rem;
+  }
+
+  /* Catogories */
+
+  .main_categories{
+    display: grid;
+    grid-template-columns: repeat(2 , 40vw);
+    grid-gap: 2px;
+
+}
+
+
+/* Top Rated */
+
+.topRated_home{
+    display: grid;
+    grid-template-columns: repeat(2 , 40vw);
+    grid-gap: 7vw ;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4vw;
+}
+
+.topRatedImages{
+    min-width: 42vw;
+    min-height: 35vh;
+    max-width: 42vw;
+    max-height: 40vh;
+}
+.topRated_home div{
+    min-height: 50vh;
+    min-width: 45vw;
+}
+
+.topRated_home div h3{
+
+    max-width: 40vw;
+    max-height: 2vh;
+}
+ 
+}
+
+
+
+
+@media screen and (max-width : 570px) {
+
+
+
+    .recommended_title{
+        font-size: 1.8rem;
+    }
+    .recommended_list  {
+    flex-direction: column;
+    margin-top: 5vh;
+    }
+    .recommended_list div {
+        height: 45vh;
+        width: 60vw;
+
+    }
+    
+  .recommendedImages{
+    height: 35vh;
+    width: 50vw;
+  }
+  .recommended_list h2{
+    font-size: 1.4rem;
+  }
+
+  /* Categories */
+
+  .all_categories_title{
+    font-size: 2rem;
+  }
+
+  /* top rated */
+
+  .topRated h2{
+    font-size: 1.5rem;
+  }
+
+  /* Main Carousel */
+/* 
+  .slide{
+    width: 100vw;
+    height: 75vh;
+  }
+
+  .mainBg{
+    width: 50vw;
+    height: 50vh;
+
+  } */
+ 
+}
+
+@media screen and (max-width : 480px) {
+   
+ .all_categories_title{
+    font-size: 1.5rem;
+ }
+}
+
+@media screen and (max-width : 404px) {
+
+    /* Carousel */
+
+    .container{
+       height:  60vh;
+    }
+
+    .slide{
+        height: 60vh;
+        align-items: flex-end;
+    }
+
+    .mainBg{
+        height: 70%;
+        width: 80%;
+        margin-bottom: 5vh;
+    }
+    
+
+    /* Recommended */
+    .recommended_list  {
+    flex-direction: column;
+    margin-top: 5vh;
+    }
+    .recommended_list div {
+        height: 45vh;
+        width: 70vw;
+
+    }
+    
+  .recommendedImages{
+    height: 35vh;
+    width: 60vw;
+  }
+  .recommended_list h2{
+    font-size: 1rem;
+  }
+
+ 
+}
+@media screen and (max-width : 380px) {
+
+    /* categories */
+    .all_categories_title{
+    font-size: 1.2rem;
+}
+ .categories{
+     margin-right: 5vw;
+    }
+    .categories h2{
+        
+        font-size: 1rem;
+        
+    }
+
+    /* top rated */
+
+    .topRated_home div h3{
+        font-size: .8rem;
+    }
+}
+@media screen and (max-width : 305px) {
+    
+    /* recommended */
+
+    .recommended_title{
+        font-size: 1.1rem;
+    }
+    
+    /* categories */
+    .all_categories_title{
+        font-size: 1rem;
+ }
+ .categories{
+    margin-right: 5vw;
+ }
+ .categories h2{
+     
+    font-size: 1rem;
+
+ }
+}
+
+

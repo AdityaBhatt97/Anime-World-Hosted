@@ -1,0 +1,128 @@
+.search{
+    background: linear-gradient(125deg ,  #17245f , rgb(20, 20, 20));
+    min-height: 100vh;
+  
+}
+
+.searchTitles{
+    width: 100vw;
+     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 5vh;
+}
+.searchTitles h2{
+    color: white;
+    font-size: 3rem;
+}
+.searchAnimes{
+    
+
+    display: grid;
+    grid-template-columns: repeat(4 , 23vw);
+    grid-gap: 5px;
+    justify-content: center;
+
+}
+
+.searchAnime{
+    min-height: 50vh;
+    min-width: 20vw;    
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.searchAnime:hover{
+    background-color: goldenrod;
+}
+.searchAnime h2{
+    text-align: center;
+    font-size: 1.2rem;
+    height: 5vh;
+    width: 80%;
+}
+.searchImages {
+
+    height: 35vh
+
+}
+/* Empty Search */
+
+.nullSearch {
+    color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 5vh; */
+    margin-bottom: 10vh;
+    
+}
+
+.nullSearch h2{
+    margin-top: 5vh;
+    width: 40%;
+    
+}
+
+@media screen and (max-width : 1220px) {
+   
+   .searchImages{
+    height: 30vh;
+    width: 20vw;
+   }
+   .searchAnime h2{
+    font-size: 1rem;
+   }
+
+   .nullSearch h2{
+    font-size: 1.2rem;
+    width: 80%;
+   }
+
+  }
+@media screen and (max-width : 800px) {
+
+    .searchTitles h2{
+        font-size: 2.5rem;
+    }
+   
+    .searchAnimes{
+        grid-template-columns: repeat(2 , 43vw);
+    }
+    
+   .searchImages{
+    height: 30vh;
+    width: 30vw;
+   }
+   .searchAnime h2{
+    font-size: 1.2rem;
+   }
+
+  
+  }
+@media screen and (max-width : 500px) {
+
+    .searchTitles h2{
+        font-size: 2rem;
+    }
+   
+    .searchAnimes{
+        grid-template-columns: repeat(2 , 43vw);
+    }
+    .searchAnime{
+        margin-top:0;
+    }
+   .searchImages{
+    height: 30vh;
+    width: 30vw;
+   }
+   .searchAnime h2{
+    font-size: .8rem;
+   }
+  }

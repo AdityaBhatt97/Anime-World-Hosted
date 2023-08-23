@@ -1,0 +1,154 @@
+.footer {
+    width: 100vw;
+    background-color: black;
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.center{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 20vh;
+    
+}
+.centerNav{
+    font-size: 1.4rem;
+}
+
+
+.right  {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+}
+.footerImage {
+    /* margin-bottom: 2vh; */
+    cursor: pointer;
+    border-radius: 20%;
+    height: 4vh;
+    width: 2vw;
+
+}
+
+/* Media Queries */
+
+@media screen and (max-width : 1450px) {
+     
+  .footerImage{
+    width: 2vw;
+    border-radius: 20%;
+
+  }
+    .centerNav{
+        font-size: 1.2rem;
+    }
+
+       }
+@media screen and (max-width : 1000px) {
+     
+  .footerImage{
+    min-height: 2vh;
+    width: 2vw;
+    border-radius: 20%;
+
+  }
+    .centerNav{
+        font-size: 1rem;
+    }
+    .footerImage{
+        height: 2.5vh;
+        width: 3vw;
+    }
+
+    .left{
+        font-size: .8rem;
+    }
+ 
+       }
+     
+@media screen and (max-width : 710px) {
+     
+    .centerNav{
+        font-size: 1rem;
+    }
+    .footerImage{
+        height: 2.5vh;
+        width: 3vw;
+        border-radius: 20%;
+        
+    }
+    .right{
+        margin-right: 2vw;
+}
+
+    .left{
+        font-size: .8rem;
+    }
+ 
+       }
+@media screen and (max-width : 560px) {
+     
+    .centerNav{
+        font-size: .7rem;
+    }
+    .footerImage{
+        height: 2.5vh;
+        width: 3vw;
+        border-radius: 20%;
+        
+    }
+
+
+    .left{
+        font-size: .5rem;
+        flex: 1.5;
+    }
+    .right{
+        flex: 1.5;
+    }
+    .center{
+        flex: 1.5;
+    }
+ 
+       }
+
+     
+@media screen and (max-width : 340px) {
+     
+    .centerNav{
+        font-size: .5rem;
+    }
+    .footerImage{
+        height: 2vh;
+        width: 2.5vw;
+        border-radius: 20%;
+        
+    }
+    .left{
+        font-size: .4rem;
+        flex: 1.5;
+    }
+    .right{
+        flex: 1.5;
+        margin-right: 5vw;
+    }
+    .center{
+        flex: 1.5;
+    }
+ 
+       }
+     
