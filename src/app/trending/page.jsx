@@ -6,63 +6,60 @@ import Link from "next/link"
 
 
 
-const getTrending = async() => {
+const getTrending = async(year,trending) => {
 
 
   
-  const date = new Date()
-  let trending ;
-  let month = date.getMonth()
-
-  let year = date.getFullYear()
-
-  // month = 1
-  
-  // let day = new Date().getTime() / 1000;
-
-  month = month.toString()
-  if (month === '1'){
-    
-    trending = 12;
-    year = year-1;
-    month = ''
-
-  }
-  
-  if(month.length === 1 && month !== 1){
-    trending = `0${month -1}`;
-    
-  
-  } 
-  
-  else if (month.length === 2) {
-    
-    trending = month-1;
-    
-   
-  }
-  
-if(trending === 9) {
-  trending =  `09`
-  
-
-}
-
-
-
-
 const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw` )
 const data = await res.json()
-return data.data
+return data?.data
 
 }
 
 
 export  default async  function page(){
 
+    const date = new Date()
+    let trending ;
+    let month = date.getMonth()
+  
+    let year = date.getFullYear()
+  
+    // month = 1
+    
+    // let day = new Date().getTime() / 1000;
+  
+    month = month.toString()
+    if (month === '1'){
+      
+      trending = 12;
+      year = year-1;
+      month = ''
+  
+    }
+    
+    if(month.length === 1 && month !== 1){
+      trending = `0${month -1}`;
+      
+    
+    } 
+    
+    else if (month.length === 2) {
+      
+      trending = month-1;
+      
+     
+    }
+    
+  if(trending === 9) {
+    trending =  `09`
+    
+  
+  }
+  
+  console.log(trending)
 
-
-    const data = await getTrending()
+    const data = await getTrending(year ,trending)
     
     // console.log(data)
 
