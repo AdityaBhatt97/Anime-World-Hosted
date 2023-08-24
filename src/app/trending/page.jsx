@@ -13,9 +13,9 @@ const getTrending = async() => {
 //     trending = '05'
 //   }
 // const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw` )
-const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=2023-05-15&sfw` )
+const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=2023-03-15&sfw` )
 const data = await res.json()
-return data?.data
+return data.data
 
 }
 
@@ -73,7 +73,9 @@ export  default async  function page(){
         <div className= {styles.trending} >
 <Navbar />
 
-<Link  href={`/anime/${data[0]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
+<h2>{data[0]?.title}</h2>
+
+{/* <Link  href={`/anime/${data[0]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
 
 <div className={styles.trendingAnime}>
     <Image src={data[0]?.images?.webp?.large_image_url} height={600} width={600} className={styles.trendingImages} alt={data[0]?.title}/>
@@ -82,7 +84,7 @@ export  default async  function page(){
 </div>
 
 
-</Link>
+</Link> */}
 
 {/* <div className={styles.trendingAnimes}>
 <Link  href={`/anime/${data[0]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
