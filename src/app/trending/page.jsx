@@ -6,12 +6,12 @@ import Link from "next/link"
 
 
 
-const getTrending = async(year,trending) => {
+const getTrending = async() => {
 
 
-  if(trending === 0) {
-    trending = '05'
-  }
+//   if(trending === 0) {
+//     trending = '05'
+//   }
 // const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw` )
 const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=2023-05-15&sfw` )
 const data = await res.json()
@@ -71,10 +71,20 @@ export  default async  function page(){
     return (
         
         <div className= {styles.trending} >
-
-
 <Navbar />
-<div className={styles.trendingAnimes}>
+
+<Link  href={`/anime/${data[0]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
+
+<div className={styles.trendingAnime}>
+    <Image src={data[0]?.images?.webp?.large_image_url} height={600} width={600} className={styles.trendingImages} alt={data[0]?.title}/>
+    <h2>{data[0]?.title}</h2>
+
+</div>
+
+
+</Link>
+
+{/* <div className={styles.trendingAnimes}>
 <Link  href={`/anime/${data[0]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
 
 <div className={styles.trendingAnime}>
@@ -165,7 +175,7 @@ export  default async  function page(){
 
 </div>
 
-
+ */}
 
 
 
