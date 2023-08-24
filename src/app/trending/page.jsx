@@ -9,7 +9,9 @@ import Link from "next/link"
 const getTrending = async(year,trending) => {
 
 
-  
+  if(trending === 0) {
+    trending = '05'
+  }
 const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw` )
 const data = await res.json()
 return data?.data
