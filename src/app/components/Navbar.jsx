@@ -23,11 +23,11 @@ export const Navbar = () => {
         <li>Popular</li>
     </Link>
     
-    {/* <Link href={'/trending'} style={{textDecoration : 'none', color : 'white'}}>
+    <Link href={'/trending'} style={{textDecoration : 'none', color : 'white'}}>
         <li>Trending</li>
     </Link>
        
-        */}
+       
     
     </div>
         </div>
