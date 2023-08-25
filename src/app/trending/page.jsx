@@ -19,8 +19,8 @@ return data.data
 export  default async  function page(){
 
 
-
-    const data = await getPopular()
+    let data = null;
+     data = await getPopular()
     // console.log(data)
 
    
