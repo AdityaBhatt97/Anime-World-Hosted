@@ -1,30 +1,49 @@
+'use client'
 import { Navbar } from "@/app/components/Navbar"
 import styles from '../styles/popular.module.css'
 import Image from 'next/image'
 import Link from "next/link"
 import axios from "axios"
+import { useEffect, useState } from "react"
 
 
 
-const getPopular = async() => {
-// const res = await fetch('https://api.jikan.moe/v4/top/anime')
-// const res = await fetch('https://api.jikan.moe/v4/top/reviews')
-const res = await axios.get('https://api.jikan.moe/v4/top/reviews')
+// const getPopular = async() => {
+// // const res = await fetch('https://api.jikan.moe/v4/top/anime')
+// // const res = await fetch('https://api.jikan.moe/v4/top/reviews')
+// const res = await axios.get('https://api.jikan.moe/v4/top/reviews')
 
-// const res = await fetch(`https://api.jikan.moe/v4/anime?&min_score=7&start_date=2021-01-01&sort=desc`)
+// // const res = await fetch(`https://api.jikan.moe/v4/anime?&min_score=7&start_date=2021-01-01&sort=desc`)
 
-// const data = await res.json()
-console.log(res)
-return res.data?.data
+// // const data = await res.json()
+// console.log(res.data?.data)
+// return res?.data?.data
 
-}
+// }
 
 
 export  default async  function page(){
 
 
-    let data = null;
-     data = await getPopular()
+  
+
+  const [data , setData] = useState([])
+
+
+  useEffect(() => {
+
+    const getRequest = async() => {
+
+    const res = await axios.get('https://api.jikan.moe/v4/top/reviews')
+         setData(res?.data?.data)
+
+    }
+    getRequest()
+  },[])
+
+  console.log(data)
+    // let data = null;
+    // const data = await getPopular()
     // console.log(data)
 
    
