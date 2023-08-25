@@ -22,7 +22,7 @@ import { useEffect, useState } from "react"
 // }
 
 
-export  default async  function page(){
+export  default async  function Page(){
 
 
   
@@ -41,7 +41,7 @@ export  default async  function page(){
     getRequest()
   },[])
 
-  console.log(data)
+  // console.log(data)t
     // let data = null;
     // const data = await getPopular()
     // console.log(data)
