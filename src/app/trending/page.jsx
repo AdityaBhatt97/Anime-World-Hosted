@@ -132,7 +132,7 @@ if(trending === 9) {
           </div>
           </Link>
        
-          entry?.
+
      
           <Link  href={`/anime/${data[5]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
             <div className= {styles.popularAnime}> 
