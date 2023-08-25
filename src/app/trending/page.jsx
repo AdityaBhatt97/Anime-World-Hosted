@@ -2,16 +2,20 @@ import { Navbar } from "@/app/components/Navbar"
 import styles from '../styles/popular.module.css'
 import Image from 'next/image'
 import Link from "next/link"
+import axios from "axios"
 
 
 
 const getPopular = async() => {
 // const res = await fetch('https://api.jikan.moe/v4/top/anime')
-const res = await fetch('https://api.jikan.moe/v4/top/reviews')
+// const res = await fetch('https://api.jikan.moe/v4/top/reviews')
+const res = await axios.get('https://api.jikan.moe/v4/top/reviews')
+
 // const res = await fetch(`https://api.jikan.moe/v4/anime?&min_score=7&start_date=2021-01-01&sort=desc`)
 
-const data = await res.json()
-return data.data
+// const data = await res.json()
+console.log(res)
+return res.data?.data
 
 }
 
