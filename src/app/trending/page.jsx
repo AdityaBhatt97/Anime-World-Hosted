@@ -65,7 +65,7 @@ if(trending === 9) {
     const getRequest = async() => {
 
     // const res = await axios.get('https://api.jikan.moe/v4/top/reviews') 
-    const res = await axios.get(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-04-15&sfw`) 
+    const res = await axios.get(`https://api.jikan.moe/v4/anime?min_score=8&start_date=${year}-${trending}-15&sfw`) 
 
          setData(res?.data?.data)
 
