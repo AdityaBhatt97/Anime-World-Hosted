@@ -7,21 +7,6 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 
 
-
-// const getPopular = async() => {
-// // const res = await fetch('https://api.jikan.moe/v4/top/anime')
-// // const res = await fetch('https://api.jikan.moe/v4/top/reviews')
-// const res = await axios.get('https://api.jikan.moe/v4/top/reviews')
-
-// // const res = await fetch(`https://api.jikan.moe/v4/anime?&min_score=7&start_date=2021-01-01&sort=desc`)
-
-// // const data = await res.json()
-// console.log(res.data?.data)
-// return res?.data?.data
-
-// }
-
-
 export  default async  function Page(){
 
 
@@ -88,12 +73,6 @@ if(trending === 9) {
     getRequest()
   },[])
 
-  console.log(data)
-    // let data = null;
-    // const data = await getPopular()
-    // console.log(data)
-
-   
 
   return (
 
