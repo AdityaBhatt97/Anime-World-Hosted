@@ -1,6 +1,6 @@
 
 import { Navbar } from "@/app/components/Navbar"
-import styles from '../styles/trending.module.css'
+import styles from '../styles/categories.module.css'
 import Image from 'next/image'
 import Link from "next/link"
 import { Footer } from "@/app/components/Footer"
@@ -47,7 +47,7 @@ let end = 25;
 
   return (
 
-    <div className={styles.trending}>
+    <div className={styles.categories}>
       <Navbar />
       
  
@@ -60,7 +60,7 @@ let end = 25;
    <Image src={data[start]?.entry[start]?.images?.webp?.large_image_url} height={500} width={500}  className={styles.mainImages} alt={data[start]?.entry[start]?.title}/>
    {/* <div className= {styles.categoriesTopAnimeOneInfo}> */}
 
-  <h2 >{data[start]?.entry[start]?.title}</h2>
+  <h2 className={styles.categoriesTopTitle}>{data[start]?.entry[start]?.title}</h2>
 
    {/* </div> */}
    
