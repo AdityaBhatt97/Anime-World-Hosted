@@ -10,7 +10,7 @@ const getTrending = async() => {
 
 
 
-const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=2023-02-01&sfw` )
+const res = await fetch(`https://api.jikan.moe/v4/anime?min_score=8&start_date=2018-01-01&sfw` )
 const data = await res.json()
 return data.data
 
