@@ -39,7 +39,7 @@ export  default async  function page(){
     // console.log(data[0])
     
 let start = 0
-let end = data.length;
+
 
 
 
