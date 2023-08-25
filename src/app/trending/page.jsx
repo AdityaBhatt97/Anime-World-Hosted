@@ -1,6 +1,6 @@
 
 import { Navbar } from "@/app/components/Navbar"
-import styles from '../styles/categories.module.css'
+import styles from '../styles/trending.module.css'
 import Image from 'next/image'
 import Link from "next/link"
 import { Footer } from "@/app/components/Footer"
@@ -17,8 +17,8 @@ const getGenres = async() => {
   const animeYear = year - 5;
   
   // const res = await fetch(`https://api.jikan.moe/v4/anime?genres=${param}&min_score=7&start_date=${animeYear}-01-01&sort=desc&sfw`)
-  const res = await fetch(`https://api.jikan.moe/v4/anime?&min_score=7&start_date=${animeYear}-01-01&sort=desc`)
-  // const res = await fetch('https://api.jikan.moe/v4/recommendations/anime')
+//   const res = await fetch(`https://api.jikan.moe/v4/anime?&min_score=7&start_date=${animeYear}-01-01&sort=desc`)
+  const res = await fetch('https://api.jikan.moe/v4/recommendations/anime')
   
   const data = await res.json()
 
@@ -47,73 +47,27 @@ let end = 25;
 
   return (
 
-    <div className={styles.categories}>
+    <div className={styles.trending}>
       <Navbar />
       
-      <div className={styles.categoriesTop}> 
+ 
 
 {/* One */}
-<Link href={`/anime/${data[start]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
+<Link href={`/anime/${data[start]?.entry[start]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
   <div className={styles.categoriesTopAnimes}>
    
    
-   <Image src={data[start]?.images?.webp?.large_image_url} height={500} width={500}  className={styles.mainImages} alt={data[start]?.title}/>
+   <Image src={data[start]?.entry[start]?.images?.webp?.large_image_url} height={500} width={500}  className={styles.mainImages} alt={data[start]?.entry[start]?.title}/>
    {/* <div className= {styles.categoriesTopAnimeOneInfo}> */}
 
-  <h2 className={styles.categoriesTopTitle}>{data[start]?.title}</h2>
+  <h2 >{data[start]?.entry[start]?.title}</h2>
 
    {/* </div> */}
    
   </div>
 </Link>
 
-{/* Two */}
-  <Link href={`/anime/${data[start+1]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
-  <div className={styles.categoriesTopAnimes}>
-   
-   
-   {/* <div className= {styles.categoriesTopAnimeOneInfo}> */}
 
-  <h2 className={styles.categoriesTopTitle}>{data[start + 1]?.title}</h2>
-   <Image src={data[start + 1]?.images?.webp.large_image_url} height={500} width={500} className={styles.mainImages} alt={data[start]?.title} />
-
-   {/* </div> */}
-   
-  </div>
-</Link>
-
-  {/* Three */}
-  
-  <Link href={`/anime/${data[start+2]?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}}>
-  <div className={styles.categoriesTopAnimes}>
-   
-   
-   <Image src={data[start + 2]?.images?.webp?.large_image_url} height={500} width={500} className={styles.mainImages} alt={data[start]?.title}/>
-   {/* <div className= {styles.categoriesTopAnimeOneInfo}> */}
-
-  <h2 className={styles.categoriesTopTitle}>{data[start + 2]?.title}</h2>
-
-   {/* </div> */}
-   
-  </div>
-</Link>
-
-</div>
-
-<div className={styles.categoriesAnimes}>
- 
- {
-  data.splice(start + 3 , end).map(items => (
-    <Link href={`/anime/${items?.mal_id}`} style={{textDecoration : 'none' , color : 'white'}} key={items?.mal_id}>
-  <div className={styles.categoriesAnime} key={items?.mal_id}> 
-   <Image src={items?.images?.jpg?.image_url} height={250} width={250} className= {styles.categoriesAnimeImg} alt={data[start]?.title} />
-    <h2>{items?.title}</h2>
-  </div>
-    </Link>
-  ))}
-
-      </div>
- 
 
       <Footer />
 
