@@ -1,6 +1,7 @@
 # Anime-World
 
 This is a Anime Website to get the best animes for you.
+
 The website will be blazing fast to navigate as NEXT JS has been used to build it.
 
 ![anime-world1](https://github.com/AdityaBhatt97/Anime-World-Hosted/assets/129366781/7c09f444-b4cd-4bf9-ae9e-be21a627b44f)
