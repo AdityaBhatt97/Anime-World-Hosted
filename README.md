@@ -1,34 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anime-World
 
-## Getting Started
+This is a Anime Website to get the best animes for you.
+The website will be blazing fast to navigate as NEXT JS has been used to build it.
 
-First, run the development server:
+![anime-world1](https://github.com/AdityaBhatt97/Anime-World-Hosted/assets/129366781/7c09f444-b4cd-4bf9-ae9e-be21a627b44f)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![anime-world3](https://github.com/AdityaBhatt97/Anime-World-Hosted/assets/129366781/25d0c916-f08f-4805-8ccb-9779dd21d8ae)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# Features
 
-To learn more about Next.js, take a look at the following resources:
+You will be able to check the ratings and see the trailer of all the latest and old animes , so that you can decide the best anime for you
+and even get see the related animes to that. you can search for the animes of your choice and  even check different genres if you are ever 
+in mood of watching something new.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![anime-world2](https://github.com/AdityaBhatt97/Anime-World-Hosted/assets/129366781/bf6bce92-3f74-4107-9950-05e867db2819)
